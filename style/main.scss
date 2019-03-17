@@ -6,14 +6,31 @@ body {
     width: 100%;
     background-color: orange;
     box-shadow: 0 -3px 10px 7px rgba(100,100,100,1);
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     .nav-bar-inner {
-      display: inline-block;
+      max-width: 800px;
+      width: 90vw;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
       h1 {
         display: inline-block;
         margin: 0;
+        font-family: "Trebuchet MS", Helvetica, sans-serif;
         a {
+            display: inline-block;
             text-decoration: none;
+            line-height: 30px;
+
+              color: #00408f;
+              transition: color 0.4s;
+        }
+        &:hover {
+          a {
+            color: #000;
+          }
         }
       }
 
@@ -25,6 +42,18 @@ body {
             display: inline-block;
             a {
                 text-decoration: none;
+                margin-left: 10px;
+                font-family: "Trebuchet MS", Helvetica, sans-serif;
+                color: #000;
+                border-bottom: 2px solid rgba(255,255,255,0);
+                transition: border-color 0.4s;
+                transition: color 0.4s;
+            }
+            &:hover {
+              a {
+                border-bottom: 2px solid #0050ff;
+                color: #0050ff;
+              }
             }
           }
         }

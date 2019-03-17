@@ -1,5 +1,5 @@
 <?php
-	$dirContent = array_diff(scandir('./'), array('.', '..', 'style'));
+	$dirContent = array_diff(scandir('./'), array('.', '..', 'style', '.git'));
 	$folders = array_filter($dirContent, function ($c) {
 			return is_dir('./'.$c);
 	});
@@ -45,7 +45,7 @@
 	<body>
 		<div class='nav-bar'>
 			<div class="nav-bar-inner">
-				<h1><a href="/">TKON</a></h1>
+				<h1><a href="/">Thomas Næsje</a></h1>
 				<nav>
 					<ul>
 						<li><a href='#'>About</a></li>
