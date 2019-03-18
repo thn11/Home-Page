@@ -1,0 +1,6 @@
+[submodule "uml-maker"]
+	path = uml-maker
+	url = https://github.com/thn11/p5-uml
+[submodule "solitaire"]
+	path = solitaire
+	url = git@github.com:thn11/deck-of-cards.git
