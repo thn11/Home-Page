@@ -1,11 +1,19 @@
+$primary: #ff6200;
+$secondary: #00408f;
+$white: #f0f0f0;
+$gray: #646464;
+$black: #000000;
+$transparrent: rgba(255,255,255,0);
+
+
 body {
   margin: 0;
-  background-color: rgba(240,240,240,1);
+  background-color: $white;
 
   .nav-bar {
     width: 100%;
-    background-color: orange;
-    box-shadow: 0 -3px 10px 7px rgba(100,100,100,1);
+    background-color: $primary;
+    box-shadow: 0 -3px 10px 7px $gray;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -24,12 +32,12 @@ body {
             text-decoration: none;
             line-height: 30px;
 
-              color: #00408f;
+              color: $secondary;
               transition: color 0.4s;
         }
         &:hover {
           a {
-            color: #000;
+            color: $black;
           }
         }
       }
@@ -44,15 +52,15 @@ body {
                 text-decoration: none;
                 margin-left: 10px;
                 font-family: "Trebuchet MS", Helvetica, sans-serif;
-                color: #000;
-                border-bottom: 2px solid rgba(255,255,255,0);
+                color: $black;
+                border-bottom: 2px solid $transparrent;
                 transition: border-color 0.4s;
                 transition: color 0.4s;
             }
             &:hover {
               a {
-                border-bottom: 2px solid #0050ff;
-                color: #0050ff;
+                border-bottom: 2px solid $secondary;
+                color: $secondary;
               }
             }
           }
@@ -67,11 +75,11 @@ body {
       display: inline-block;
       max-width: 800px;
       width: 90vw;
-      border: 0px solid rgba(255,255,255,0);
-      background-color: white;
+      border: 0px solid $transparrent;
+      background-color: $white;
       margin-bottom: 40px;
       border-radius: 10px;
-      box-shadow: 2px 3px 10px rgba(100,100,100,1);
+      box-shadow: 2px 3px 10px $gray;
       transition: background-color 0.4s;
       .card {
         display: flex;
@@ -88,14 +96,14 @@ body {
           padding: 10px;
           .card-header {
             margin: 0;
-            color: orange;
+            color: $primary;
             font-weight: bold;
             font-family: "Arial Black", Gadget, sans-serif;
             transition: color 0.4s;
           }
           .card-text {
             margin: 0;
-            color: black;
+            color: $black;
             font-size: 18px;
           }
         }
@@ -104,11 +112,11 @@ body {
         margin-top: 40px;
       }
       &:hover {
-        background-color: orange;
+        background-color: $primary;
         .card {
           .card-content {
             .card-header {
-              color: #00408f;
+              color: $secondary;
             }
             .card-text {
 
