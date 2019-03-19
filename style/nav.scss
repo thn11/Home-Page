@@ -2,6 +2,8 @@
     width: 100%;
     background-color: $primary;
     box-shadow: 0 -3px 10px 7px $gray;
+    position: sticky;
+    z-index: 1;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -66,25 +68,30 @@
                             display: block;
                             position: absolute;
                             padding: 0;
-                            background-color: $primary;
+                            margin: 0;
+                            background-color: $white;
+                            border: 5px solid $primary;
                             border-radius: 0 0 5px 5px;
-                            padding: 10px;
-
-                            &:before {
-                                content: "";
-                                position: absolute;
-                                top: 0;
-                                bottom: 0;
-                                left: 0;
-                                right: 0;
-                                border-radius: 0 0 6px 6px;
-                                z-index: -1;
-                                box-shadow: 5px 5px 20px 5px $gray;
-                            }
 
                             > li {
                                 display: block;
-                                margin: 10px 0;
+                                transition: background-color .4s;
+
+                                a {
+                                    color: $black;
+                                    display: block;
+                                    padding: 10px 5px;
+                                    text-decoration: none;
+                                    transition: color .4s;
+                                }
+
+                                &:hover {
+                                    background-color: $primary;
+
+                                    a {
+                                        color: $secondary;
+                                    }
+                                }
                             }
                         }
                     }
