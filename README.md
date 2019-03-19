@@ -1,8 +1,9 @@
-@HomePage
+# HomePage
 
 ## Install:
-*   `git pull git@github.com:thn11/home-page.git`
+*   `git clone git@github.com:thn11/home-page.git`
 *   `git submodule init`
+*   `git submodule update`
 
 ## Build SASS:
 *   `sass --watch style/main.scss style.css`
