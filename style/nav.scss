@@ -49,50 +49,49 @@
                         text-decoration: none;
                         font-family: "Trebuchet MS", Helvetica, sans-serif;
                         color: $black;
-                        border-bottom: 2px solid $transparrent;
                         transition: border-color .4s;
                         transition: color .4s;
                     }
 
                     > ul {
-                        display: none;
-                    }
-
-                    &:hover {
-                        > a {
-                            border-bottom: 2px solid $secondary;
-                            color: $secondary;
-                        }
-
-                        > ul {
+                        visibility: hidden;
+                        position: absolute;
+                        padding: 0;
+                        margin: 0;
+                        background-color: $white;
+                        border: 5px solid $primary;
+                        border-radius: 0 0 5px 5px;
+                        opacity: 0;
+                        transition: opacity 0.5s ease-out;
+                        > li {
                             display: block;
-                            position: absolute;
-                            padding: 0;
-                            margin: 0;
-                            background-color: $white;
-                            border: 5px solid $primary;
-                            border-radius: 0 0 5px 5px;
+                            transition: background-color .4s;
 
-                            > li {
+                            a {
+                                color: $black;
                                 display: block;
-                                transition: background-color .4s;
+                                padding: 10px 5px;
+                                text-decoration: none;
+                                transition: color .4s;
+                            }
+
+                            &:hover {
+                                background-color: $primary;
 
                                 a {
-                                    color: $black;
-                                    display: block;
-                                    padding: 10px 5px;
-                                    text-decoration: none;
-                                    transition: color .4s;
-                                }
-
-                                &:hover {
-                                    background-color: $primary;
-
-                                    a {
-                                        color: $secondary;
-                                    }
+                                    color: $secondary;
                                 }
                             }
+                        }
+                    }
+                    &:hover {
+                        > a {
+                            color: $secondary;
+                        }
+                        > ul {
+                          visibility: visible;
+                          opacity: 1;
+                          transition: opacity 0.5s ease-out;
                         }
                     }
                 }

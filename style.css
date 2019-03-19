@@ -44,42 +44,44 @@
   text-decoration: none;
   font-family: "Trebuchet MS", Helvetica, sans-serif;
   color: #000000;
-  border-bottom: 2px solid rgba(255, 255, 255, 0);
   transition: border-color 0.4s;
   transition: color 0.4s;
 }
 .nav-bar .nav-bar-inner > nav > ul > li > ul {
-  display: none;
-}
-.nav-bar .nav-bar-inner > nav > ul > li:hover > a {
-  border-bottom: 2px solid #00408f;
-  color: #00408f;
-}
-.nav-bar .nav-bar-inner > nav > ul > li:hover > ul {
-  display: block;
+  visibility: hidden;
   position: absolute;
   padding: 0;
   margin: 0;
   background-color: #f0f0f0;
   border: 5px solid #ff8220;
   border-radius: 0 0 5px 5px;
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
 }
-.nav-bar .nav-bar-inner > nav > ul > li:hover > ul > li {
+.nav-bar .nav-bar-inner > nav > ul > li > ul > li {
   display: block;
   transition: background-color 0.4s;
 }
-.nav-bar .nav-bar-inner > nav > ul > li:hover > ul > li a {
+.nav-bar .nav-bar-inner > nav > ul > li > ul > li a {
   color: #000000;
   display: block;
   padding: 10px 5px;
   text-decoration: none;
   transition: color 0.4s;
 }
-.nav-bar .nav-bar-inner > nav > ul > li:hover > ul > li:hover {
+.nav-bar .nav-bar-inner > nav > ul > li > ul > li:hover {
   background-color: #ff8220;
 }
-.nav-bar .nav-bar-inner > nav > ul > li:hover > ul > li:hover a {
+.nav-bar .nav-bar-inner > nav > ul > li > ul > li:hover a {
   color: #00408f;
+}
+.nav-bar .nav-bar-inner > nav > ul > li:hover > a {
+  color: #00408f;
+}
+.nav-bar .nav-bar-inner > nav > ul > li:hover > ul {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.5s ease-out;
 }
 
 .main-content {
