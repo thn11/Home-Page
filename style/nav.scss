@@ -1,0 +1,86 @@
+.nav-bar {
+    width: 100%;
+    background-color: $primary;
+    box-shadow: 0 -3px 10px 7px $gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .nav-bar-inner {
+        max-width: 800px;
+        width: 90vw;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        > h1 {
+            display: inline-block;
+            margin: 0;
+            font-family: "Trebuchet MS", Helvetica, sans-serif;
+
+            > a {
+                display: inline-block;
+                text-decoration: none;
+                line-height: 30px;
+                color: $secondary;
+                transition: color .4s;
+            }
+
+            &:hover {
+                a {
+                    color: $black;
+                }
+            }
+        }
+
+        > nav {
+            display: inline-block;
+
+            > ul {
+                display: inline-block;
+
+                > li {
+                    display: inline-block;
+                    margin-left: 20px;
+
+                    > a {
+                        text-decoration: none;
+                        font-family: "Trebuchet MS", Helvetica, sans-serif;
+                        color: $black;
+                        border-bottom: 2px solid $transparrent;
+                        transition: border-color .4s;
+                        transition: color .4s;
+                    }
+
+                    > ul {
+                        display: none;
+                    }
+
+                    &:hover {
+                        > a {
+                            border-bottom: 2px solid $secondary;
+                            color: $secondary;
+                        }
+
+                        > ul {
+                            display: block;
+                            position: absolute;
+                            padding: 0;
+                            background-color: $primary;
+                            padding: 10px;
+
+                            &:after {
+                                box-shadow: 5px 5px 5px 1px $gray;
+                            }
+
+                            > li {
+                                display: block;
+                                margin: 10px 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

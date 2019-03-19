@@ -1,8 +1,4 @@
-body {
-  margin: 0;
-  background-color: #f0f0f0;
-}
-body .nav-bar {
+.nav-bar {
   width: 100%;
   background-color: #ff8220;
   box-shadow: 0 -3px 10px 7px #646464;
@@ -10,100 +6,122 @@ body .nav-bar {
   align-items: center;
   justify-content: center;
 }
-body .nav-bar .nav-bar-inner {
+.nav-bar .nav-bar-inner {
   max-width: 800px;
   width: 90vw;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-body .nav-bar .nav-bar-inner h1 {
+.nav-bar .nav-bar-inner > h1 {
   display: inline-block;
   margin: 0;
   font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
-body .nav-bar .nav-bar-inner h1 a {
+.nav-bar .nav-bar-inner > h1 > a {
   display: inline-block;
   text-decoration: none;
   line-height: 30px;
   color: #00408f;
   transition: color 0.4s;
 }
-body .nav-bar .nav-bar-inner h1:hover a {
+.nav-bar .nav-bar-inner > h1:hover a {
   color: #000000;
 }
-body .nav-bar .nav-bar-inner nav {
+.nav-bar .nav-bar-inner > nav {
   display: inline-block;
 }
-body .nav-bar .nav-bar-inner nav ul {
+.nav-bar .nav-bar-inner > nav > ul {
   display: inline-block;
 }
-body .nav-bar .nav-bar-inner nav ul li {
+.nav-bar .nav-bar-inner > nav > ul > li {
   display: inline-block;
+  margin-left: 20px;
 }
-body .nav-bar .nav-bar-inner nav ul li a {
+.nav-bar .nav-bar-inner > nav > ul > li > a {
   text-decoration: none;
-  margin-left: 10px;
   font-family: "Trebuchet MS", Helvetica, sans-serif;
   color: #000000;
   border-bottom: 2px solid rgba(255, 255, 255, 0);
   transition: border-color 0.4s;
   transition: color 0.4s;
 }
-body .nav-bar .nav-bar-inner nav ul li:hover a {
+.nav-bar .nav-bar-inner > nav > ul > li > ul {
+  display: none;
+}
+.nav-bar .nav-bar-inner > nav > ul > li:hover > a {
   border-bottom: 2px solid #00408f;
   color: #00408f;
 }
-body .main-content {
+.nav-bar .nav-bar-inner > nav > ul > li:hover > ul {
+  display: block;
+  position: absolute;
+  padding: 0;
+  background-color: #ff8220;
+  padding: 10px;
+}
+.nav-bar .nav-bar-inner > nav > ul > li:hover > ul:after {
+  box-shadow: 5px 5px 5px 1px #646464;
+}
+.nav-bar .nav-bar-inner > nav > ul > li:hover > ul > li {
+  display: block;
+  margin: 10px 0;
+}
+
+.main-content {
   text-align: center;
 }
-body .main-content a {
+.main-content a {
   text-decoration: none;
   display: inline-block;
   max-width: 800px;
   width: 90vw;
-  border: 0px solid rgba(255, 255, 255, 0);
+  border: 0 solid rgba(255, 255, 255, 0);
   background-color: #ffffff;
   margin-bottom: 40px;
   border-radius: 10px;
   box-shadow: 2px 3px 10px #646464;
   transition: background-color 0.4s;
 }
-body .main-content a .card {
+.main-content a .card {
   display: flex;
 }
-body .main-content a .card .card-image {
+.main-content a .card .card-image {
   object-fit: cover;
   height: 20vw;
   max-height: 200px;
   width: auto;
   border-radius: 10px 0 0 10px;
 }
-body .main-content a .card .card-content {
+.main-content a .card .card-content {
   flex: 1;
   text-align: left;
   padding: 10px;
 }
-body .main-content a .card .card-content .card-header {
+.main-content a .card .card-content .card-header {
   margin: 0;
   color: #ff8220;
   font-weight: bold;
   font-family: "Arial Black", Gadget, sans-serif;
   transition: color 0.4s;
 }
-body .main-content a .card .card-content .card-text {
+.main-content a .card .card-content .card-text {
   margin: 0;
   color: #000000;
   font-size: 18px;
 }
-body .main-content a:first-child {
+.main-content a:first-child {
   margin-top: 40px;
 }
-body .main-content a:hover {
+.main-content a:hover {
   background-color: #ff8220;
 }
-body .main-content a:hover .card .card-content .card-header {
+.main-content a:hover .card .card-content .card-header {
   color: #00408f;
+}
+body {
+  margin: 0;
+  background-color: #f0f0f0;
 }
 
 /*# sourceMappingURL=style.css.map */

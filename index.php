@@ -1,5 +1,5 @@
 <?php
-	$dirContent = array_diff(scandir('./'), array('.', '..', 'style', '.git'));
+	$dirContent = array_diff(scandir('./'), array('.', '..', 'style', '.git', '.sass-cache'));
 	$folders = array_filter($dirContent, function ($c) {
 			return is_dir('./'.$c);
 	});
@@ -34,6 +34,7 @@
 					</div>
 				</div>
 			</a>
+			<br>
 		 ';
 	 }
 ?>
@@ -49,7 +50,12 @@
 				<nav>
 					<ul>
 						<li><a href='#'>About</a></li>
-						<?= $page_links ?>
+						<li>
+							<a href='projects'>Projects</a>
+							<ul>
+								<?= $page_links ?>
+							</ul>
+						</li>
 					</ul>
 				</nav>
 			</div>
