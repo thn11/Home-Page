@@ -1,3 +1,59 @@
+@keyframes appear {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  1% {
+    visibility: visible;
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+@-webkit-keyframes appear {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  1% {
+    visibility: visible;
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+@keyframes disappear {
+  0% {
+    visibility: visible;
+    opacity: 1;
+  }
+  99% {
+    visibility: visible;
+    opacity: 0;
+  }
+  100% {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+@-webkit-keyframes disappear {
+  0% {
+    visibility: visible;
+    opacity: 1;
+  }
+  99% {
+    visibility: visible;
+    opacity: 0;
+  }
+  100% {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
 .nav-bar {
   width: 100%;
   background-color: #ff8220;
@@ -48,15 +104,14 @@
   transition: color 0.4s;
 }
 .nav-bar .nav-bar-inner > nav > ul > li > ul {
-  visibility: hidden;
   position: absolute;
   padding: 0;
   margin: 0;
+  visibility: hidden;
   background-color: #f0f0f0;
   border: 5px solid #ff8220;
+  animation: disappear 0.2s;
   border-radius: 0 0 5px 5px;
-  opacity: 0;
-  transition: opacity 0.5s ease-out;
 }
 .nav-bar .nav-bar-inner > nav > ul > li > ul > li {
   display: block;
@@ -80,8 +135,7 @@
 }
 .nav-bar .nav-bar-inner > nav > ul > li:hover > ul {
   visibility: visible;
-  opacity: 1;
-  transition: opacity 0.5s ease-out;
+  animation: appear 0.2s;
 }
 
 .main-content {
