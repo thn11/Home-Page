@@ -1,8 +1,19 @@
 @import "constants";
 @import "nav";
 @import "projects";
+@import "footer";
 
 body {
     margin: 0;
     background-color: $white;
+    display: flex;
+    flex-direction: column;
+
+    .main-content {
+        flex: 1 0 auto;
+    }
+
+    .footer {
+        flex-shrink: 0;
+    }
 }

@@ -20,10 +20,8 @@
 				];
 			}
 	 }, $folders);
-	 $page_links = '';
 	 $sites_HTML = '';
 	 foreach($data as $page) {
-		 $page_links .= '<li><a href="'.$page['link'].'">'.$page['name'].'</a></li>';
 		 $sites_HTML .= '
 			<a href="'.$page['link'].'">
 				<div class="card">
@@ -40,28 +38,14 @@
 ?>
 
 <html>
-<head>
-	<link rel="stylesheet" type="text/css" href="style.css">
-</head>
+<?php include 'components/header.php'?>
 	<body>
-		<div class='nav-bar'>
-			<div class="nav-bar-inner">
-				<h1><a href="/">Thomas Næsje</a></h1>
-				<nav>
-					<ul>
-						<li><a href='#'>About</a></li>
-						<li>
-							<a href='projects'>Projects</a>
-							<ul>
-								<?= $page_links ?>
-							</ul>
-						</li>
-					</ul>
-				</nav>
-			</div>
-		</div>
-		<div class="main-content">
+		<?php include 'components/nav.php' ?>
+
+		<div class="main-content projects">
 			<?= $sites_HTML ?>
 		</div>
+
+		<?php include 'components/footer.php' ?>
 	</body>
 </html>
