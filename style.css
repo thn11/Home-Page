@@ -1,64 +1,9 @@
-@keyframes appear {
-  0% {
-    visibility: hidden;
-    opacity: 0;
-  }
-  1% {
-    visibility: visible;
-    opacity: 0;
-  }
-  100% {
-    visibility: visible;
-    opacity: 1;
-  }
-}
-@-webkit-keyframes appear {
-  0% {
-    visibility: hidden;
-    opacity: 0;
-  }
-  1% {
-    visibility: visible;
-    opacity: 0;
-  }
-  100% {
-    visibility: visible;
-    opacity: 1;
-  }
-}
-@keyframes disappear {
-  0% {
-    visibility: visible;
-    opacity: 1;
-  }
-  99% {
-    visibility: visible;
-    opacity: 0;
-  }
-  100% {
-    visibility: hidden;
-    opacity: 0;
-  }
-}
-@-webkit-keyframes disappear {
-  0% {
-    visibility: visible;
-    opacity: 1;
-  }
-  99% {
-    visibility: visible;
-    opacity: 0;
-  }
-  100% {
-    visibility: hidden;
-    opacity: 0;
-  }
-}
 .nav-bar {
   width: 100%;
   background-color: #ff8220;
   box-shadow: 0 -3px 10px 7px #646464;
   position: sticky;
+  top: 0;
   z-index: 1;
   display: flex;
   align-items: center;
@@ -74,6 +19,7 @@
 .nav-bar .nav-bar-inner > h1 {
   display: inline-block;
   margin: 0;
+  padding: 0 10px;
   font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
 .nav-bar .nav-bar-inner > h1 > a {
@@ -106,7 +52,7 @@
   display: block;
   text-decoration: none;
   font-family: "Trebuchet MS", Helvetica, sans-serif;
-  color: #000000;
+  color: #00408f;
   transition: border-color 0.4s;
   transition: color 0.4s;
 }
@@ -136,7 +82,7 @@
   border-radius: 0 0 10px 10px;
 }
 .nav-bar .nav-bar-inner > nav > ul > li > ul > li a {
-  color: #000000;
+  color: #00408f;
   display: block;
   padding: 10px 5px;
   text-decoration: none;
@@ -146,11 +92,11 @@
   background-color: #ff9f53;
 }
 .nav-bar .nav-bar-inner > nav > ul > li > ul > li:hover a {
-  color: #00408f;
+  color: #000000;
 }
 .nav-bar .nav-bar-inner > nav > ul > li:hover > a {
   background-color: #ff9f53;
-  color: #00408f;
+  color: #000000;
 }
 .nav-bar .nav-bar-inner > nav > ul > li:hover > ul {
   visibility: visible;
@@ -204,7 +150,7 @@
   margin-top: 40px;
 }
 .main-content.projects a:hover {
-  background-color: #ff8220;
+  background-color: #ff9f53;
 }
 .main-content.projects a:hover .card .card-content .card-header {
   color: #00408f;

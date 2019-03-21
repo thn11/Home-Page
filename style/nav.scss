@@ -1,73 +1,9 @@
-@keyframes appear {
-    0% {
-        visibility: hidden;
-        opacity: 0;
-    }
-
-    1% {
-        visibility: visible;
-        opacity: 0;
-    }
-
-    100% {
-        visibility: visible;
-        opacity: 1;
-    }
-}
-@-webkit-keyframes appear {
-    0% {
-        visibility: hidden;
-        opacity: 0;
-    }
-
-    1% {
-        visibility: visible;
-        opacity: 0;
-    }
-
-    100% {
-        visibility: visible;
-        opacity: 1;
-    }
-}
-@keyframes disappear {
-    0% {
-        visibility: visible;
-        opacity: 1;
-    }
-
-    99% {
-        visibility: visible;
-        opacity: 0;
-    }
-
-    100% {
-        visibility: hidden;
-        opacity: 0;
-    }
-}
-@-webkit-keyframes disappear {
-    0% {
-        visibility: visible;
-        opacity: 1;
-    }
-
-    99% {
-        visibility: visible;
-        opacity: 0;
-    }
-
-    100% {
-        visibility: hidden;
-        opacity: 0;
-    }
-}
-
 .nav-bar {
     width: 100%;
     background-color: $primary;
     box-shadow: 0 -3px 10px 7px $gray;
     position: sticky;
+    top: 0;
     z-index: 1;
     display: flex;
     align-items: center;
@@ -83,6 +19,7 @@
         > h1 {
             display: inline-block;
             margin: 0;
+            padding: 0 10px;
             font-family: "Trebuchet MS", Helvetica, sans-serif;
 
             > a {
@@ -106,7 +43,7 @@
             > ul {
                 display: table;
                 margin: 0;
-                height: 50px;
+                height: $nav-bar-height;
 
                 > li {
                     display: table-cell;
@@ -116,11 +53,11 @@
                     > a {
                         height: 100%;
                         padding: 0 10px;
-                        line-height: 50px;
+                        line-height: $nav-bar-height;
                         display: block;
                         text-decoration: none;
                         font-family: "Trebuchet MS", Helvetica, sans-serif;
-                        color: $black;
+                        color: $secondary;
                         transition: border-color .4s;
                         transition: color .4s;
                     }
@@ -153,7 +90,7 @@
                             }
 
                             a {
-                                color: $black;
+                                color: $secondary;
                                 display: block;
                                 padding: 10px 5px;
                                 text-decoration: none;
@@ -164,7 +101,7 @@
                                 background-color: $off-primary;
 
                                 a {
-                                    color: $secondary;
+                                    color: $black;
                                 }
                             }
                         }
@@ -173,7 +110,7 @@
                     &:hover {
                         > a {
                             background-color: $off-primary;
-                            color: $secondary;
+                            color: $black;
                         }
 
                         > ul {
