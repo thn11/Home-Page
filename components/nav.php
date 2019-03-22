@@ -1,11 +1,11 @@
 <?php
-	$dirContent = array_diff(scandir('./'), array('.', '..', 'style', '.git', '.sass-cache', 'components'));
+	$dirContent = array_diff(scandir('../projects'), array('.', '..', 'style', '.git', '.sass-cache', 'components'));
 	$folders = array_filter($dirContent, function ($c) {
-			return is_dir('./'.$c);
+			return is_dir('../projects/'.$c);
 	});
 	$data = array_map(function ($f) {
-			if (is_file('./'.$f.'/site.info')){
-				$string = file_get_contents('./'.$f.'/site.info');
+			if (is_file('../projects/'.$f.'/site.info')){
+				$string = file_get_contents('../projects/'.$f.'/site.info');
 				$json = json_decode($string, true);
 				return [
 					'name' => $json['name'],
@@ -14,13 +14,13 @@
 			} else {
 				return [
 					'name' => $f,
-					'link' => '/'.$f,
+					'link' => '/projects/'.$f,
 				];
 			}
 	 }, $folders);
 	 $page_links = '';
 	 foreach($data as $page) {
-		 $page_links .= '<li><a href="'.$page['link'].'">'.$page['name'].'</a></li>';
+		 $page_links .= '<li><a href="/projects/'.$page['link'].'">'.$page['name'].'</a></li>';
 	 }
 ?>
 
@@ -31,7 +31,7 @@
 			<ul>
 				<li><a href='#'>About</a></li>
 				<li>
-					<a href='projects'>Projects</a>
+					<a href='/projects'>Projects</a>
 					<ul>
 						<?= $page_links ?>
 					</ul>

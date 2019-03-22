@@ -1,5 +1,5 @@
 <?php
-	$dirContent = array_diff(scandir('./'), array('.', '..', 'style', '.git', '.sass-cache'));
+	$dirContent = array_diff(scandir('./'), array('.', '..', 'style', '.git', '.sass-cache', 'components'));
 	$folders = array_filter($dirContent, function ($c) {
 			return is_dir('./'.$c);
 	});

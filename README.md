@@ -6,7 +6,7 @@
 *   `git submodule update`
 
 ## Build SASS:
-*   `sass --watch style/main.scss style.css`
+*   `sass --watch style/main.scss style/style.css`
 
 
 ## Update submodules:
