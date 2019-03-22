@@ -22,15 +22,18 @@
 	 foreach($data as $page) {
 		 $page_links .= '<li><a href="/projects/'.$page['link'].'">'.$page['name'].'</a></li>';
 	 }
+	 $current_page = str_replace('/', '', $_SERVER['REQUEST_URI']);
 ?>
 
 <div class='nav-bar'>
 	<div class="nav-bar-inner">
-		<h1><a href="/">Thomas Næsje</a></h1>
+		<h1><a href="/home">Thomas Næsje</a></h1>
 		<nav>
 			<ul>
-				<li><a href='#'>About</a></li>
-				<li>
+				<li <?= $current_page === 'about' ? 'class="current"' : '' ?>>
+					<a href='/about'>About</a>
+				</li>
+					<li <?= $current_page === 'projects' ? 'class="current"' : '' ?>>
 					<a href='/projects'>Projects</a>
 					<ul>
 						<?= $page_links ?>

@@ -94,6 +94,9 @@
 .nav-bar .nav-bar-inner > nav > ul > li > ul > li:hover a {
   color: #000000;
 }
+.nav-bar .nav-bar-inner > nav > ul > li.current {
+  box-shadow: inset 0px 0px 10px 10px #ff9f53;
+}
 .nav-bar .nav-bar-inner > nav > ul > li:hover > a {
   background-color: #ff9f53;
   color: #000000;
@@ -150,7 +153,7 @@
   margin-top: 40px;
 }
 .main-content.projects a:hover {
-  background-color: #ff9f53;
+  background-color: #ec6800;
 }
 .main-content.projects a:hover .card .card-content .card-header {
   color: #00408f;
