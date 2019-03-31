@@ -1,9 +1,26 @@
 <?php
 
 
-run_commands() {
+function run_commands() {
+  exec('git fetch', $output, $error);
+  if ($error) {
+    var_dump($output);
+    return [
+      'message' => "Could not fetch state: Error code " . $error,
+      'type' => "yellow"
+    ];
+  }
+  exec('git status --porcelain', $output, $error);
+  if ($error) {
+    var_dump($output);
+    return [
+      'message' => "Could not get status: Error code " . $error,
+      'type' => "yellow"
+    ];
+  }
   exec('git pull origin master --strategy-option=theirs', $output, $error);
   if ($error) {
+    var_dump($output);
     return [
       'message' => "Could not pull: Error code " . $error,
       'type' => "yellow"
